@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [Parallel Appium Tests]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="tests" name="Device2(failed)">
+    <parameter name="appiumPort" value="4725"/>
+    <parameter name="udid" value="emulator-5556"/>
+    <parameter name="deviceName" value="Second-Emulator"/>
+    <parameter name="systemPort" value="8082"/>
+    <classes>
+      <class name="haidaraliappium.LoginTest">
+        <methods>
+          <include name="loginTestCase"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- haidaraliappium.LoginTest -->
+      <class name="haidaraliappium.GetGeoLocationTest">
+        <methods>
+          <include name="getGeoLocationTest"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- haidaraliappium.GetGeoLocationTest -->
+      <class name="haidaraliappium.LoginOutTest">
+        <methods>
+          <include name="logoutTestCase"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- haidaraliappium.LoginOutTest -->
+    </classes>
+  </test> <!-- Device2(failed) -->
+  <test thread-count="2" parallel="tests" name="Device1(failed)">
+    <parameter name="appiumPort" value="4723"/>
+    <parameter name="udid" value="emulator-5554"/>
+    <parameter name="deviceName" value="Practice-Emulator"/>
+    <parameter name="systemPort" value="8081"/>
+    <classes>
+      <class name="haidaraliappium.LoginTest">
+        <methods>
+          <include name="loginTestCase"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- haidaraliappium.LoginTest -->
+      <class name="haidaraliappium.GetGeoLocationTest">
+        <methods>
+          <include name="getGeoLocationTest"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- haidaraliappium.GetGeoLocationTest -->
+      <class name="haidaraliappium.AddProductIntoCart">
+        <methods>
+          <include name="addProductTest"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- haidaraliappium.AddProductIntoCart -->
+    </classes>
+  </test> <!-- Device1(failed) -->
+</suite> <!-- Failed suite [Parallel Appium Tests] -->

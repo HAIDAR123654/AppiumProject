@@ -1,0 +1,27 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Parallel Appium Tests">
+ 
+    <test name="Device1">
+        <parameter name="deviceName" value="Practice-Emulator" />
+        <parameter name="appiumPort" value="4723" />
+        <parameter name="udid" value="emulator-5554" />
+        <parameter name="systemPort" value="8081"/>
+        <classes>
+            <class name="haidaraliappium.StartAppiumServer" />
+            <class name="haidaraliappium.LoginTest" />
+            <class name="haidaraliappium.GetGeoLocationTest" />
+            <class name="haidaraliappium.AddProductIntoCart" />
+        </classes>
+    </test>
+    <test name="Device2">
+        <parameter name="deviceName" value="Second-Emulator" />
+        <parameter name="appiumPort" value="4725" />
+        <parameter name="udid" value="emulator-5556" />
+        <parameter name="systemPort" value="8082"/>
+        <classes>
+            <class name="haidaraliappium.LoginTest" />
+            <class name="haidaraliappium.GetGeoLocationTest" />
+            <class name="haidaraliappium.LogoutTest" />
+        </classes>
+    </test>
+</suite>
