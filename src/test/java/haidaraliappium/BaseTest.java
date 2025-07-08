@@ -25,7 +25,7 @@ public class BaseTest {
         options.setUiautomator2ServerReadTimeout(Duration.ofSeconds(30));
         options.setUiautomator2ServerInstallTimeout(Duration.ofSeconds(30));
         options.setApp("D:\\EclipseSoftware\\appiumnew\\src\\test\\java\\resources\\Android-MyDemoAppRN.1.3.0.build-244.apk");
-        URL url = new URL("http://192.168.0.113:" + appiumPort);
+        URL url = new URL("http://127.0.0.1:" + appiumPort);
         driver.set(new AndroidDriver(url, options));
         wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
         System.out.println("this is appium" + appiumPort);
